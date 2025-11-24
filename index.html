@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubi Testuali con Three.js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="canvas-3d"></canvas>
+
+    <div class="ui-container">
+        <h3>Forma il Testo</h3>
+        <div class="input-group">
+            <input type="text" id="text-input" placeholder="Scrivi qualcosa...">
+            <button id="submit-button">INVIA</button>
+        </div>
+
+        <div class="options-container">
+            <div class="option-item">
+                <label for="detail-select">Dettaglio Testo:</label>
+                <select id="detail-select">
+                    <option value="detailed">Dettagliato (Nuovo)</option>
+                    <option value="pixelated">Pixellato (Vecchio)</option>
+                </select>
+            </div>
+            <div class="option-item">
+                <label for="cube-count">Num Cubi:</label>
+                <input type="number" id="cube-count" value="500" min="100" max="3000" step="100">
+                <button id="restart-button">Applica e Riavvia</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+            "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/index.js",
+            "cannon-es": "https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.js",
+            
+            "three/addons/math/MeshSurfaceSampler.js": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/math/MeshSurfaceSampler.js"
+        }
+    }
+    </script>
+    <script type="module" src="main.js"></script>
+
+</body>
+</html>
